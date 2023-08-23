@@ -20,12 +20,12 @@ function countStudents(path) {
     }
     console.log(`Number of students: ${NoOfStudents}`);
     for (const field in fields) {
-      if (fields) {
-	console.log(`Number of students in ${field}: field.length. List: ${fields[field].toString().split(',').join(', ')}`);
+      if (field) {
+	console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].toString().split(',').join(', ')}`);
       }
     }
   } catch (err) {
-    throw new Error('Cannot laod the database');
+    throw new Error('Cannot laod database');
   }
 }
 module.exports = countStudents;
