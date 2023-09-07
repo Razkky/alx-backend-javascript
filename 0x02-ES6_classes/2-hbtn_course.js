@@ -19,13 +19,13 @@ export default class HolbertonCourse {
   }
 
   set length(newLength) {
-    if (Object.getPrototypeOf(newLength) !== String.prototype) throw new Error('name must be a Number');
-    this._name = newLength;
+    if (Object.getPrototypeOf(newLength) !== Number.prototype) throw new Error('name must be a Number');
+    this._length = newLength;
   }
 
   set students(newStudents) {
-    if (Object.getPrototypeOf(newStudents) !== String.prototype) throw new Error('studnet must be a String');
-    this._name = newStudents;
+    if (Object.getPrototypeOf(newStudents) !== Array.prototype) throw new Error('studnet must be a String');
+    this._students = newStudents;
   }
 
   // getters
