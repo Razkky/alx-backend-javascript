@@ -8,7 +8,5 @@ export default function initializeRooms() {
     const classRoom = new ClassRoom(size);
     classRooms.push(classRoom);
   }
-  console.log(classRooms);
+  return classRooms;
 }
-
-initializeRooms();
