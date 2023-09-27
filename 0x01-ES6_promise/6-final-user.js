@@ -2,7 +2,7 @@ import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
 export default async function handleProfileSignup(firstName, lastName, fileName) {
-  const userData = await signUpUser(fileName, lastName).then((data) => ({
+  const userData = await signUpUser(firstName, lastName).then((data) => ({
     status: 'fulfilled',
     value: data,
   }));
@@ -11,5 +11,6 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
     status: 'rejected',
     value: err.toString(),
   }));
+
   return Promise.resolve([userData, fileData]);
 }
